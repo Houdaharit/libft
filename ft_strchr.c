@@ -6,13 +6,13 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:07:43 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/02 11:07:46 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/03 17:26:59 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (c == '\0')
 	{
@@ -23,6 +23,6 @@ char	*ft_strchr(char *s, int c)
 	while (*s && *s != c)
 		s ++;
 	if (*s == c)
-		return (s);
+		return ((char*)s);
 	return (NULL);
 }

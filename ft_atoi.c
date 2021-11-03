@@ -6,20 +6,15 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:56:45 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/02 09:56:49 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/03 17:11:46 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+#include "libft.h"
+
+static int	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	return (0);
-}
-
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

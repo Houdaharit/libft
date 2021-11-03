@@ -6,12 +6,12 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:30:14 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/02 11:30:20 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/03 17:32:13 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			ptr = s;
+			ptr = (char *)s;
 		s ++;
 	}
 	return (ptr);

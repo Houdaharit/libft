@@ -6,24 +6,16 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:50:39 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/03 13:05:26 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/03 17:04:16 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_strlcat(char *dst, const char *src, unsigned int dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	int				len;
+	size_t	i;
+	size_t	len;
 
 	len = ft_strlen(dst);
 	i = 0;
