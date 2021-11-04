@@ -6,12 +6,13 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:21:26 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/04 14:21:29 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/04 20:23:06 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
