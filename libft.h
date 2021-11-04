@@ -1,23 +1,34 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 14:21:26 by hharit            #+#    #+#             */
+/*   Updated: 2021/11/04 14:21:29 by hharit           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef unsigned int size_t;
-int	ft_isalpha(int);
-int	ft_isdigit(int);
-size_t	ft_strlen(const char *);
-int	ft_atoi(const char *);
-int	ft_isalnum(int);
-int	ft_isascii(int);
-int	ft_isprint(int);
-char	*ft_strchr(const char *, int);
-size_t	ft_strlcat(char *, const char *, size_t);
-size_t	ft_strlcpy(char *, const char *, size_t);
-int	ft_strncmp(const char *, const char *, size_t);
-char	*ft_strnstr(const char *, const char *, size_t);
-char	*ft_strrchr(const char *, int);
-int	ft_toupper(int);
-int	ft_tolower(int);
-void	*ft_memset(void *,int, size_t);
-void	ft_bzero(void *, size_t);
-int	ft_memcmp(const void *, const void *, size_t);
+#ifndef LIBFT_H
+# define LIBFT_H
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+size_t	ft_strlen(const char *s);
+int		ft_atoi(const char *str);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif

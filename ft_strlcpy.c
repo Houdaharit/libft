@@ -6,12 +6,12 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:43:30 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/03 17:02:05 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/04 13:42:06 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t  size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 

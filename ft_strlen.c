@@ -6,11 +6,11 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:57:40 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/03 17:00:34 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/04 13:41:34 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

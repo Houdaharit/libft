@@ -6,10 +6,11 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:56:56 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/03 16:49:52 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/04 13:43:11 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if (ft_isdigit(c) || ft_isdigit(c))

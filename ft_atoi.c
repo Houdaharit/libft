@@ -6,18 +6,11 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:56:45 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/03 17:11:46 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/04 14:02:19 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(char c)
-{
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *str)
 {
@@ -26,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	nbr = 0;
-	while (*str && ft_isspace(*str))
+	while (*str && ((*str >= 9 && c <= 13) || c == 32))
 		str ++;
 	if (*str && (*str == '+' || *str == '-'))
 	{
