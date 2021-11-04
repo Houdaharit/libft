@@ -17,4 +17,6 @@ char	*ft_strnstr(const char *, const char *, size_t);
 char	*ft_strrchr(const char *, int);
 int	ft_toupper(int);
 int	ft_tolower(int);
+void	*ft_memset(void *,int, size_t);
+void	ft_bzero(void *, size_t);
 #endif
