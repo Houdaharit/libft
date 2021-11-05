@@ -6,10 +6,11 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:08:16 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/04 20:40:37 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/05 10:20:29 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*to;
