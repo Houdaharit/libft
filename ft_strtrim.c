@@ -45,11 +45,8 @@ static int ft_lenstr(char const *s1, char const *set)
 	len = 0;
 	while (*s1 && ft_issep(*s1,set))
 		s1++;
-	while (*s1 && s1 != ptr)
-	{
-		s1++;
+	while (s1[len] && &s1[len] != ptr)
 		len++;
-	}
 	return (len);
 }
 
