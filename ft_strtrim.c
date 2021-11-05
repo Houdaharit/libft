@@ -66,9 +66,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = ft_endstr(s1, set);
 	while (*s1 && ft_issep(*s1,set))
 		s1++;
-	while (s1[i] && &s1[i] != ptr)
+	while ((s1 + i) && (s1 + i) != ptr)
 	{
-		str[i] = s1[i];
+		str[i] = s1 + i;
 		i++;
 	}
 	str[i] = '\0';
