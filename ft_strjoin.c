@@ -6,13 +6,13 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:01:53 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 18:59:04 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/05 19:19:43 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_length(char const *s1, char const *s2)
+static int	ft_length(char const *s1, char const *s2)
 {
 	int	len;
 
