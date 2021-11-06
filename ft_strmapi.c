@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 18:01:53 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 19:42:26 by hharit           ###   ########.fr       */
+/*   Created: 2021/11/06 08:25:26 by hharit            #+#    #+#             */
+/*   Updated: 2021/11/06 08:25:29 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+/*static char ft_toupper1(unsigned int i, char c)
 {
-	char	*str;
-	int		i;
+	i = 0;
+	c = ft_toupper(c);
+	return (c);
+}*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
-	while (s1[i])
+	while (s[i])
 	{
-		str[i] = s1[i];
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	while (*s2)
-	{
-		str[i] = *s2;
-		i++;
-		s2 ++;
-	}
-	str[i] = *s2;
+	str[i] = '\0';
 	return (str);
 }
 /*
 #include <stdio.h>
 int main()
+
 {
-	printf("%s", ft_strjoin("hello ","everyone"));
+	printf("%s\n", ft_strmapi("hello",&ft_toupper1));
 }*/

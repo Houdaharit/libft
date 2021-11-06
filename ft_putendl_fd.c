@@ -1,43 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 18:01:53 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 19:42:26 by hharit           ###   ########.fr       */
+/*   Created: 2021/11/06 09:52:41 by hharit            #+#    #+#             */
+/*   Updated: 2021/11/06 09:52:43 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*str;
-	int		i;
-
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
-		return (NULL);
-	while (s1[i])
+	while (*s)
 	{
-		str[i] = s1[i];
-		i++;
+		write (fd, s, 1);
+		s++;
 	}
-	while (*s2)
-	{
-		str[i] = *s2;
-		i++;
-		s2 ++;
-	}
-	str[i] = *s2;
-	return (str);
+	write(fd, "\n", 1);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%s", ft_strjoin("hello ","everyone"));
-}*/

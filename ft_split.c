@@ -80,3 +80,11 @@ char	**ft_split(char const *s, char c)
 	str[i] = NULL;
 	return (str);
 }
+/*
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+	(void)argc;
+	char **str = ft_split(argv[1], '*');
+	printf("%s", str[2]);
+}*/

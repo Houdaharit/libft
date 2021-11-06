@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 18:01:53 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 19:42:26 by hharit           ###   ########.fr       */
+/*   Created: 2021/11/06 09:55:32 by hharit            #+#    #+#             */
+/*   Updated: 2021/11/06 09:55:33 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
+	unsigned int		n1;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
-		return (NULL);
-	while (s1[i])
+	if (n < 0)
 	{
-		str[i] = s1[i];
-		i++;
+		n1 = n * -1;
+		write (1, "-", 1);
 	}
-	while (*s2)
+	else
+		n1 = n;
+	if (n1)
 	{
-		str[i] = *s2;
-		i++;
-		s2 ++;
-	}
-	str[i] = *s2;
-	return (str);
+		ft_putnbr_fd (n1 / 10, fd);
+		ft_putchar_fd ((n1 % 10) + '0', fd);
+	}	
 }
 /*
-#include <stdio.h>
 int main()
 {
-	printf("%s", ft_strjoin("hello ","everyone"));
+	ft_putnbr_fd(-2147483648, 1);
 }*/
