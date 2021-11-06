@@ -29,11 +29,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 	
-}
+}/*
 #include <stdio.h>
 int main()
 {
 	const char str1[10] = "1cvscsk";
 	const char str2[10] = "9cgsucsi";
 	printf("%d\n", ft_memcmp(str1, str2, 5));
-}
+}*/
