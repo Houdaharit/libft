@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:04:57 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/07 10:32:46 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/07 16:06:28 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -28,8 +28,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
+<<<<<<< HEAD
 }
 
+=======
+	
+}/*
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -38,3 +42,5 @@ int main()
 	const char str2[10] = "9cgsucsi";
 	printf("%d\n", ft_memcmp(str1, str2, 5));
 }
+}*/
+
