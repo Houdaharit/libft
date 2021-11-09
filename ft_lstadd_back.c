@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:32:07 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/08 18:42:52 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/09 13:14:15 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	(void)new;
-	while ((*lst) -> next)
-		*lst = (*lst) -> next;
-
-	*lst -> next = &(*new);
+	while ((*lst)->next)
+		*lst = (*lst)->next;
+	(*lst)->next = new;
 }
