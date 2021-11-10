@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:26:38 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/09 14:53:51 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:25:12 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,11 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	while (lst)
+	{
+		(*del)((*lst)->content);
+		free(*lst);
+		(*lst)  = NULL;
+		(*lst) = (*lst)->next;
+	}
 }
