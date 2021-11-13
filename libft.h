@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:21:26 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/09 13:30:21 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/13 03:30:49 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void ft_lstclear(t_list **lst, void (*del)(void*));
 #endif

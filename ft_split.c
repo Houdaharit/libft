@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:41:48 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/04 21:56:00 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/13 04:02:18 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,15 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s ++;
 	}
-	str[i] = NULL;
+	str[i] = '\0';
 	return (str);
 }
 /*
 #include <stdio.h>
 int main(int argc, char **argv)
 {
-	(void)argc;
+	char *s = 
 	char **str = ft_split(argv[1], '*');
-	printf("%s", str[2]);
+	printf("%s\t", str[0]);
+	printf("%s",str[1]);
 }*/

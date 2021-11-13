@@ -6,16 +6,15 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:56:45 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 10:25:53 by hharit           ###   ########.fr       */
-/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	nbr;
+	long	sign;
+	long	nbr;
+	long	temp;
 
 	sign = 1;
 	nbr = 0;
@@ -29,8 +28,22 @@ int	ft_atoi(const char *str)
 	}
 	while (*str && ft_isdigit(*str))
 	{
+		temp = (temp * 10) + (*str - '0');
+		if (temp < nbr && sign == 1)
+			return (-1);
+		if (temp < nbr && sign == -1)
+			return  (0);
 		nbr = (nbr * 10) + (*str - '0');
 		str ++;
 	}
 	return (nbr * sign);
 }
+/*
+#include <stdio.h>
+int main()
+{
+	printf("ft: %d\n",ft_atoi("-9223372036854775809"));
+	printf("org: %d\n",atoi("-9223372036854775809"));
+	printf("ft: %d\n", ft_atoi("9223372036854775808"));
+	printf("org: %d",atoi("9223372036854775808"));
+}*/

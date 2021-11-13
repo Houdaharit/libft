@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:42:51 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 12:04:54 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/12 14:03:32 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ char	*ft_itoa(int n)
 {
 	char			*str;
 	int				len;
+	unsigned int	n1;
 
 	len = ft_intlen(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
 	if (n < 0)
@@ -42,10 +43,11 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	}
 	str[len] = '\0';
+	n1 = n;
 	while (len - 1)
 	{
-		str[--len] = (n % 10) + '0';
-		n /= 10;
+		str[--len] = (n1 % 10) + '0';
+		n1 /= 10;
 	}
 	return (str);
 }

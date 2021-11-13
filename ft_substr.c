@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 19:59:16 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/05 20:26:54 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/13 03:24:27 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	while (i < len && s[start + i])
+	while (i < len && s[start + i] && start <= ft_strlen(s))
 	{
 		str[i] = s[start + i];
 		i ++;
@@ -31,8 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*
 #include <stdio.h>
-
 int main()
 {
-	printf("%s", ft_substr("hello everyone",6,11));
+	printf("%s", substr("hello",6,11));
 }*/
