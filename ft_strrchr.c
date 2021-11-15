@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:30:14 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/09 13:25:24 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/15 02:20:53 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*ptr;
 
 	ptr = NULL;
-	if (c == '\0')
+	if ((char)c == '\0')
 	{
 		while (*s)
 			s ++;
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			ptr = (char *)s;
 		s ++;
 	}

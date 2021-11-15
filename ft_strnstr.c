@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:49:31 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/13 03:58:10 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/14 23:04:05 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,35 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
+	i = 0;
 		if (!(*needle))
-		return ((char *)haystack);
-	while (*haystack && len > 0)
+			return ((char *)haystack);
+		if (!ft_strlen(haystack) && !ft_strlen(needle))
+			return (""); 
+	while (haystack[i])
 	{
-		if (*haystack == *needle)
+		if (haystack[i] == needle[0])
 		{
-			i = 1;
-			while (*(haystack + i) && *(needle + i)
-				&& *(haystack + i) == *(needle + i) && i < len)
-				i ++;
-			if (i == len)
-				return ((char *)haystack);
+			j = 0;
+			while (needle[j] && haystack[i + j] == needle[j] && i + j < len)
+				j ++;
+			if (!needle[j])
+				return ((char *)(haystack + i));
 		}
-		haystack ++;
+		i ++;
 	}
 	return (NULL);
-}
+}/*
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+	char *s1 = "A";
+   size_t max = strlen(s1);
+    char *i1 = strnstr(s1, s1, 2);
+    char *i2 = ft_strnstr(s1, s1, 2);
+	printf("org :%s\n", i1);
+	printf("ft : %s\n",i2);
+}*/

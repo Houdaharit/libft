@@ -28,11 +28,6 @@ int	ft_atoi(const char *str)
 	}
 	while (*str && ft_isdigit(*str))
 	{
-		temp = (temp * 10) + (*str - '0');
-		if (temp < nbr && sign == 1)
-			return (-1);
-		if (temp < nbr && sign == -1)
-			return  (0);
 		nbr = (nbr * 10) + (*str - '0');
 		str ++;
 	}
