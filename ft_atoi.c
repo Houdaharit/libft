@@ -5,7 +5,9 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 09:56:45 by hharit            #+#    #+#             */
+/*   Created: 2021/11/15 22:56:18 by hharit            #+#    #+#             */
+/*   Updated: 2021/11/16 17:38:08 by hharit           ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -14,7 +16,6 @@ int	ft_atoi(const char *str)
 {
 	long	sign;
 	long	nbr;
-	long	temp;
 
 	sign = 1;
 	nbr = 0;

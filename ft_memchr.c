@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:01:02 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/14 23:59:20 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/15 22:57:56 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	str = (unsigned char *)s;

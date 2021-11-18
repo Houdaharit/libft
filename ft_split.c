@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:41:48 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/14 04:29:40 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/18 20:49:30 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,14 @@ static int	ft_nbstrs(char const *s, char c)
 	}
 	return (i);
 }
-//#include <stdio.h>
+
 static char	*ft_word(char const *s, char c)
 {
 	char	*str;
 	int		i;
-
+	
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_length(s, c) + 1));
-//	printf("%d\n", ft_length(s,c) + 1);
 	if (!str)
 		return (NULL);
 	while (s[i] && s[i] != c)
@@ -70,29 +69,22 @@ char	**ft_split(char const *s, char c)
 	if (!str)
 		return (NULL);
 	while (*s)
-	{
-		while (*s == c)
-			s ++;
-		if (*s && *s != c)
-		{
-			str[i] = ft_word(s, c);
-			i ++;
-		}
-		while (*s && *s != c)
-			s ++;
-	}
+    {
+        while (*s && *s == c)
+            s++;
+        if (*s && *s != c)
+            str[i++] = ft_word(s, c);
+        while (*s && *s != c)
+            s++;
+    }
 	str[i] = NULL;
-return (str);
+	return (str);
 }
 /*
 #include <stdio.h>
 int main()
 {
-	char *s = "      split       this for   me  !       "; 
-	char **str = ft_split(s, ' ');
-	while (*str)
-	{
-		printf("%s  ", *str);
-		str++;
-	}
+	//char *s = "      split       this for   me  !       "; 
+	char **str = ft_split(NULL, ' ');
+		printf("%s\n", *str);
 }*/

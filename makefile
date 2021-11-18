@@ -1,24 +1,22 @@
-NAME= libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Mafefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hharit <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/11/18 20:36:36 by hharit            #+#    #+#              #
+#    Updated: 2021/11/18 20:46:16 by hharit           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-CC= gcc
+NAME = libft.a
 
-FLAGS= -Wall -Wextra -Werror
+CC 	= gcc
 
-OBJ= $(SRC:.c=.o)
+CFLAGS = -Wall -Wextra -Werror
 
-BOBJ= $(BSRC:.c:.o)
-
-BSRC= ft_lstadd_back_bonus.c \
-ft_lstadd_front_bonus.c \
-ft_lstclear_bonus.c \
-ft_lstdelone_bonus.c \
-ft_lstiter_bonus.c \
-ft_lstlast_bonus.c \
-ft_lstmap_bonus.c \
-ft_lstnew_bonus.c \
-ft_lstsize_bonus.c
-
-SRC= ft_atoi.c \
+SRC = ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
 ft_isalnum.c \
@@ -27,15 +25,6 @@ ft_isascii.c \
 ft_isdigit.c \
 ft_isprint.c \
 ft_itoa.c \
-ft_lstadd_back.c \
-ft_lstadd_front.c \
-ft_lstclear.c \
-ft_lstdelone.c \
-ft_lstiter.c \
-ft_lstlast.c \
-ft_lstmap.c \
-ft_lstnew.c \
-ft_lstsize.c \
 ft_memchr.c \
 ft_memcmp.c \
 ft_memcpy.c \
@@ -60,26 +49,33 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c
+ft_toupper.c \
+
+BSRC = ft_lstadd_back_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstmap_bonus.c \
+ft_lstnew_bonus.c \
+ft_lstsize_bonus.c
+
+OBJ = $(SRC:.c=.o)
+
+BOBJ = $(BSRC:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
-$(OBJ) : $(SRC)
-	$(CC) $(FAGS) -o $@ -c $^
-
-bonus :
-	ar -q  $(NAME) $(BOBJ)
-
-$(BOBJ) : $(BSRC)
-	$(CC) $(FLAGS) -o $@ -c $^
+bonus : $(BOBJ)
+	ar rc $(NAME) $(BOBJ)
 
 clean :
 	rm -f *.o
 
 fclean : clean
-	rm $(NAME)
+	rm -f $(NAME)
 
-re : fclean all

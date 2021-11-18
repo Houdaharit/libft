@@ -6,14 +6,14 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:57:51 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/14 23:58:14 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/15 23:02:09 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

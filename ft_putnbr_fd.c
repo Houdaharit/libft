@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:55:32 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/15 00:47:11 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/16 20:40:41 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd ((n1 % 10) + '0', fd);
 	}
 	else
-		ft_putchar_fd(n1 + '0' , fd);
+		ft_putchar_fd(n1 + '0', fd);
 }
 /*
 int main()
