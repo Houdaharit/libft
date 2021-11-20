@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Mafefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hharit <marvin@42.fr>                      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/18 20:36:36 by hharit            #+#    #+#              #
-#    Updated: 2021/11/18 20:46:16 by hharit           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 CC 	= gcc
@@ -68,10 +56,10 @@ BOBJ = $(BSRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar -rc $(NAME) $(OBJ)
 
 bonus : $(BOBJ)
-	ar rc $(NAME) $(BOBJ)
+	ar -rc $(NAME) $(BOBJ)
 
 clean :
 	rm -f *.o
@@ -79,3 +67,4 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 
+re : fclean all

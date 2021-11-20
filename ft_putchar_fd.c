@@ -16,3 +16,11 @@ void	ft_putchar_fd(char c, int fd)
 {	
 	write (fd, &c, 1);
 }
+/*
+#include "fcntl.h"
+int main()
+{
+	int fd = open("cj",O_RDWR | O_CREAT , 0666);
+	ft_putchar_fd('d',fd);
+
+}*/

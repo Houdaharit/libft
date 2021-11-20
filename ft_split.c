@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:41:48 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/18 20:49:30 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:37:35 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static char	*ft_word(char const *s, char c)
 {
 	char	*str;
 	int		i;
-	
+
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_length(s, c) + 1));
 	if (!str)
@@ -69,14 +69,14 @@ char	**ft_split(char const *s, char c)
 	if (!str)
 		return (NULL);
 	while (*s)
-    {
-        while (*s && *s == c)
-            s++;
-        if (*s && *s != c)
-            str[i++] = ft_word(s, c);
-        while (*s && *s != c)
-            s++;
-    }
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
+			str[i++] = ft_word(s, c);
+		while (*s && *s != c)
+			s++;
+	}
 	str[i] = NULL;
 	return (str);
 }

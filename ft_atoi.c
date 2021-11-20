@@ -34,12 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nbr * sign);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("ft: %d\n",ft_atoi("-9223372036854775809"));
-	printf("org: %d\n",atoi("-9223372036854775809"));
-	printf("ft: %d\n", ft_atoi("9223372036854775808"));
-	printf("org: %d",atoi("9223372036854775808"));
-}*/

@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:01:53 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/12 00:40:46 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:30:12 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 #include <stdio.h>
 int main()
 {
-	printf("%s", ft_strjoin("hello ","everyone"));
+	char const *s2 = "\0";
+	printf("%s", ft_strjoin("hello ",s2));
 }*/
