@@ -56,13 +56,15 @@ BOBJ = $(BSRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -rc $(NAME) $(OBJ)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@ 
+	ar -rc $(NAME) $(<:.c=.o)
 
 bonus : $(BOBJ)
-	ar -rc $(NAME) $(BOBJ)
 
 clean :
-	rm -f *.o
+	rm -f $(OBJ) $(BOBJ)
 
 fclean : clean
 	rm -f $(NAME)

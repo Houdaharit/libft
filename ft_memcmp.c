@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:04:57 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/20 00:29:14 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/20 16:04:30 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,7 +29,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 int main()
 {
 	const int array1[] = {3, 15, 12};
-	const int array2[]= {32, 15, 12};
+	const int array2[]= {325, 15, 12};
 	printf("ft : %d\n",ft_memcmp(array1, array2, sizeof(int) * 3));
 	printf("org : %d\n",memcmp(array1, array2, sizeof(int) * 3));
 }*/

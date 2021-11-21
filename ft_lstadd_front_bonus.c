@@ -6,7 +6,7 @@
 /*   By: hharit <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 00:03:54 by hharit            #+#    #+#             */
-/*   Updated: 2021/11/20 00:03:56 by hharit           ###   ########.fr       */
+/*   Updated: 2021/11/21 17:24:29 by hharit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int main()
 		last -> next = add;
 		last = add;
 	}
-	ft_lstadd_front(&head,new);
+	ft_lstadd_front(head,new);
 	printf("%s",head ->content);
 }*/
