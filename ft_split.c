@@ -18,7 +18,7 @@ static int	ft_length(const char *s, char c)
 
 	i = 0;
 	while (s[i] && s[i] != c)
-		i ++;
+		i++;
 	return (i);
 }
 
@@ -30,11 +30,11 @@ static int	ft_nbstrs(char const *s, char c)
 	while (*s)
 	{
 		while (*s == c)
-			s ++;
+			s++;
 		if (*s)
-			i ++;
+			i++;
 		while (*s && *s != c)
-			s ++;
+			s++;
 	}
 	return (i);
 }
@@ -51,7 +51,7 @@ static char	*ft_word(char const *s, char c)
 	while (s[i] && s[i] != c)
 	{
 		str[i] = s[i];
-		i ++;
+		i++;
 	}
 	str[i] = '\0';
 	return (str);
