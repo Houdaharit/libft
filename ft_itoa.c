@@ -20,7 +20,7 @@ static int	ft_intlen(int n)
 	if (n == 0)
 		return (1);
 	if (n < 0)
-		len ++;
+		len++;
 	while (n)
 	{
 		n = n / 10;
