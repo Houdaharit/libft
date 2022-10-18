@@ -17,6 +17,8 @@ static int	ft_length(const char *s, char c)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i] && s[i] != c)
 		i++;
 	return (i);
@@ -27,6 +29,8 @@ static int	ft_nbstrs(char const *s, char c)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		while (*s == c)
@@ -45,6 +49,8 @@ static char	*ft_word(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_length(s, c) + 1));
 	if (!str)
 		return (NULL);
@@ -63,12 +69,10 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	str = (char **)malloc(sizeof(char *) * (ft_nbstrs(s, c) + 1));
 	if (!str)
 		return (NULL);
-	while (*s)
+	while (s && *s)
 	{
 		while (*s && *s == c)
 			s++;
